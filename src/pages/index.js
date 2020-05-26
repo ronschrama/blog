@@ -15,6 +15,7 @@ const Hero = () => {
       css={css`
         color: ${theme.colors.white};
         width: 100%;
+        height: 320px;
         background: ${theme.colors.primary};
         padding: 20px 0 30px 0;
         display: flex;
@@ -28,7 +29,8 @@ const Hero = () => {
       >
         <h1
           css={css`
-            color: ${theme.colors.white};
+            align-self: center;
+            color: rgba(255, 255, 255, 0.6);
             position: relative;
             z-index: 5;
             line-height: 1.5;
@@ -36,7 +38,7 @@ const Hero = () => {
             max-width: ${rhythm(15)};
           `}
         >
-          Your blog says the things you want to say.
+          <span role="img" aria-label="Waving Hand" style={{ color: 'white' }}>👋</span> Hi I’m <span style={{ color: '#13BBAF' }}>Ron</span>,<br />a <span style={{ color: '#FD5956', fontFamily: 'Handlee' }}>creative</span> <span style={{ color: '#FD5956', fontFamily: 'Fira Code' }}>developer</span><br />from The Netherlands.
         </h1>
       </Container>
       <div
@@ -53,6 +55,9 @@ const Description = styled.p`
   margin-bottom: 10px;
   display: inline-block;
 `
+const DateOfPost = styled.time`
+  font-size: 14px;
+`
 
 export default function Index({ data: { site, allMdx } }) {
   const theme = useTheme()
@@ -64,6 +69,7 @@ export default function Index({ data: { site, allMdx } }) {
           padding-bottom: 0;
         `}
       >
+        <h2 style={{ marginBottom: '40px' }}>Recent posts</h2>
         {allMdx.edges.map(({ node: post }) => (
           <div
             key={post.id}
@@ -71,12 +77,15 @@ export default function Index({ data: { site, allMdx } }) {
               margin-bottom: 40px;
             `}
           >
-            <h2
+            <DateOfPost>{post.frontmatter.date} </DateOfPost>
+            <h3
               css={css({
+                marginTop: rhythm(0.3),
                 marginBottom: rhythm(0.3),
                 transition: 'all 150ms ease',
                 ':hover': {
                   color: theme.colors.primary,
+                  textDecoration: 'none',
                 },
               })}
             >
@@ -86,7 +95,7 @@ export default function Index({ data: { site, allMdx } }) {
               >
                 {post.frontmatter.title}
               </Link>
-            </h2>
+            </h3>
             <Description>
               {post.excerpt}{' '}
               <Link

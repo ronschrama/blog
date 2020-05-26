@@ -17,7 +17,7 @@ const Header = ({ siteTitle }) => {
         flex-shrink: 0;
         background: none;
         padding: 20px 0;
-        background: ${theme.colors.headerBg};
+        background: ${theme.colors.primary};
       `}
     >
       <Container noVerticalPadding>
@@ -34,9 +34,14 @@ const Header = ({ siteTitle }) => {
             aria-label="go to homepage"
             css={css`
               color: white;
+              font-weight: bold;
+              font-size: 20px;
               &:hover {
                 color: white;
                 text-decoration: none;
+              }
+              &:active {
+                color: white;
               }
             `}
           >
@@ -46,6 +51,7 @@ const Header = ({ siteTitle }) => {
             css={css`
               font-size: 16px;
               line-height: 1.25;
+              font-weight: bold;
               display: flex;
               align-items: center;
               a {
@@ -53,10 +59,20 @@ const Header = ({ siteTitle }) => {
                 color: ${theme.colors.white};
                 margin-left: 16px;
                 margin-right: 16px;
+                :hover { 
+                  color: ${theme.colors.secondary};
+                }
               }
               .active {
-                display: none;
-                visibility: hidden;
+                /* Change active color */
+                border-bottom: 2px solid;
+                border-color: ${theme.colors.secondary};
+                display: inline-block;
+                text-shadow:
+                  2px 2px ${theme.colors.primary},
+                  2px -2px ${theme.colors.primary},
+                  -2px 2px ${theme.colors.primary},
+                  -2px -2px ${theme.colors.primary};
               }
             `}
           >

@@ -9,14 +9,14 @@ const DarkMode = styled(FiMoon)({
   alignItems: 'center',
   justifyContent: 'center',
   margin: '0',
-})
+});
 
 const DefaultMode = styled(FiSun)({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
   margin: '0',
-})
+});
 
 const ThemeToggler = ({ toggleTheme, themeName }) => {
   const theme = useTheme()
@@ -24,25 +24,22 @@ const ThemeToggler = ({ toggleTheme, themeName }) => {
     <Button
       css={{
         borderRadius: '50%',
-        width: '2.375rem',
-        height: '2.375rem',
+        width: '2rem',
+        height: '2rem',
         padding: 0,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         margin: 0,
-        borderStyle: 'solid',
-        borderWidth: '1px',
         color: theme.colors.white,
-        background: theme.colors.headerBg,
         '@media (hover: hover)': {
           ':hover': {
-            background:
-              theme.themeName === 'default'
-                ? theme.colors.text
-                : theme.colors.primary,
+            color: 'yellow',
           },
         },
+        ':focus': {
+          outline: '0',
+        }
       }}
       aria-label={
         themeName === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'
@@ -52,8 +49,8 @@ const ThemeToggler = ({ toggleTheme, themeName }) => {
       {themeName === 'dark' ? (
         <DefaultMode title="Switch to light mode" />
       ) : (
-        <DarkMode title="Switch to dark mode" />
-      )}
+          <DarkMode title="Switch to dark mode" />
+        )}
     </Button>
   )
 }

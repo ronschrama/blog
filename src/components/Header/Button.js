@@ -16,23 +16,23 @@ const Button = ({ to, children, secondary, ...restProps }) => {
     color: secondary ? theme.colors.primary : theme.colors.white,
     padding: '10px 15px',
     cursor: 'pointer',
-    transition: 'all 150ms ease',
-    '@media (hover: hover)': {
-      ':hover': {
-        color: theme.colors.white,
-        background: darken(0.1, theme.colors.primary),
-      },
-    },
+    // transition: 'all 150ms ease',
+    // '@media (hover: hover)': {
+    //   ':hover': {
+    //     color: theme.colors.white,
+    //     background: darken(0.1, theme.colors.primary),
+    //   },
+    // },
   })
   return to ? (
     <Link to={to} css={styles} {...restProps}>
       {children}
     </Link>
   ) : (
-    <button css={styles} {...restProps}>
-      {children}
-    </button>
-  )
+      <button css={styles} {...restProps}>
+        {children}
+      </button>
+    )
 }
 
 export default Button

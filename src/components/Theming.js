@@ -6,9 +6,11 @@ const themes = {
   default: {
     themeName: 'default',
     colors: {
-      primary: colors.blue,
+      primary: '#0F0C3F',
+      secondary: '#13BBAF',
       text: colors.black,
       bodyBg: colors.gray,
+      footerBg: '#F1F6F9',
       headerBg: colors.blue,
       link: colors.blue,
       ...colors,
@@ -17,9 +19,13 @@ const themes = {
   dark: {
     themeName: 'dark',
     colors: {
-      primary: lighten(0.05, colors.blue),
+      // primary: lighten(0.05, '#0F0C3F'),
+      // primary: '#4C1199',
+      primary: '#3D0D7C',
+      secondary: '#13BBAF',
       text: colors.white,
-      bodyBg: colors.black,
+      bodyBg: '#201C2D',
+      footerBg: '#201C2Dk',
       headerBg: colors.black,
       link: lighten(0.05, colors.blue),
       ...colors,

@@ -18,9 +18,7 @@ module.exports = {
     author: {
       name: config.author,
       minibio: `
-        <strong>egghead</strong> is the premier place on the internet for 
-        experienced developers to enhance their skills and stay current
-        in the fast-faced field of web development.
+        This is the personal website of Ron Schrama. On this website I blog about a mixture of development and design subjects.
       `,
     },
     organization: {

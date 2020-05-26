@@ -15,7 +15,6 @@ export default function Post({
   data: { site, mdx },
   pageContext: { next, prev },
 }) {
-  const author = mdx.frontmatter.author || config.author
   const date = mdx.frontmatter.date
   const title = mdx.frontmatter.title
   const banner = mdx.frontmatter.banner
@@ -32,7 +31,6 @@ export default function Post({
         <Container>
           <h1
             css={css`
-              text-align: center;
               margin-bottom: 20px;
             `}
           >
@@ -41,7 +39,7 @@ export default function Post({
           <div
             css={css`
               display: flex;
-              justify-content: center;
+              justify-content: flex-start;
               margin-bottom: 20px;
               h3,
               span {
@@ -50,12 +48,10 @@ export default function Post({
                 opacity: 0.6;
                 font-family: ${fonts.regular}, sans-serif;
                 font-weight: normal;
-                margin: 0 5px;
+                margin: 0px;
               }
             `}
           >
-            {author && <h3>{author}</h3>}
-            {author && <span>—</span>}
             {date && <h3>{date}</h3>}
           </div>
           {banner && (

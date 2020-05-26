@@ -2,11 +2,16 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import { css } from '@emotion/core'
+import styled from '@emotion/styled'
 import Container from 'components/Container'
 import SEO from '../components/SEO'
 import Layout from '../components/Layout'
 import Link from '../components/Link'
 import { bpMaxSM, bpMaxMD } from '../lib/breakpoints'
+
+const DateOfPost = styled.time`
+  font-size: 14px;
+`
 
 const Blog = ({
   data: { site, allMdx },
@@ -80,7 +85,7 @@ const Blog = ({
                 {post.frontmatter.title}
               </Link>
             </h2>
-            {/* <small>{post.frontmatter.date}</small> */}
+            <DateOfPost>{post.frontmatter.date}</DateOfPost>
             <p
               css={css`
                 margin-top: 10px;
