@@ -1,12 +1,13 @@
-import React from 'react'
-import { Link, StaticQuery, graphql } from 'gatsby'
-import { css } from '@emotion/core'
-import { useTheme } from '../Theming'
-import { bpMaxSM } from '../../lib/breakpoints'
-import MobileMenu from './MobileMenu'
-import Links from './Links'
+import React from 'react';
+import { Link, StaticQuery, graphql } from 'gatsby';
+import { css } from '@emotion/core';
+import { useTheme } from '../Theming';
+import { bpMaxSM } from '../../lib/breakpoints';
+import MobileMenu from './MobileMenu';
+import Links from './Links';
 
-import Container from '../Container'
+import Container from '../Container';
+import Logo from '../../images/LogoR.svg';
 
 const Header = ({ siteTitle }) => {
   const theme = useTheme()
@@ -18,6 +19,7 @@ const Header = ({ siteTitle }) => {
         background: none;
         padding: 20px 0;
         background: ${theme.colors.primary};
+        margin-top: -20px;
       `}
     >
       <Container noVerticalPadding>
@@ -45,6 +47,7 @@ const Header = ({ siteTitle }) => {
               }
             `}
           >
+            <img src={Logo} style={{ height: '32px', marginRight: '12px', marginTop: '20px' }} />
             {siteTitle}
           </Link>
           <div
