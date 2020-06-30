@@ -39,13 +39,13 @@ module.exports = {
         name: 'blog',
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/src/images/`,
-        name: `images`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     path: `${__dirname}/src/images/`,
+    //     name: `images`,
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
