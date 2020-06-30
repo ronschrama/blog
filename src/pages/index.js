@@ -7,6 +7,7 @@ import Link from 'components/Link'
 import { useTheme } from 'components/Theming'
 import Container from 'components/Container'
 import { rhythm } from '../lib/typography'
+import headerBG from '../images/header-bg.svg'
 
 const Hero = () => {
   const theme = useTheme()
@@ -19,6 +20,7 @@ const Hero = () => {
         background: ${theme.colors.primary};
         padding: 20px 0 30px 0;
         display: flex;
+        background-image: headerBG;
       `}
     >
       <Container

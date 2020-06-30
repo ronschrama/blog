@@ -19,7 +19,7 @@ const Header = ({ siteTitle }) => {
         background: none;
         padding: 20px 0;
         background: ${theme.colors.primary};
-        margin-top: -20px;
+        /* background:repeating-linear-gradient(45deg, rgb(27, 27, 27) 0px, rgb(27, 27, 27) 97px,rgb(24, 24, 24) 97px, rgb(24, 24, 24) 194px,rgb(20, 20, 20) 194px, rgb(20, 20, 20) 291px) */
       `}
     >
       <Container noVerticalPadding>
@@ -47,7 +47,7 @@ const Header = ({ siteTitle }) => {
               }
             `}
           >
-            <img src={Logo} style={{ height: '32px', marginRight: '12px', marginTop: '20px' }} />
+            <img src={Logo} alt="logo" style={{ height: '32px', marginRight: '12px', marginTop: '20px' }} />
             {siteTitle}
           </Link>
           <div

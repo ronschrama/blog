@@ -21,7 +21,7 @@ const themes = {
     colors: {
       // primary: lighten(0.05, '#0F0C3F'),
       // primary: '#4C1199',
-      primary: '#3D0D7C',
+      primary: '#100E16',
       secondary: '#13BBAF',
       text: colors.white,
       bodyBg: '#201C2D',

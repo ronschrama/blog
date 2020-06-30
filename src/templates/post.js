@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Img from 'gatsby-image'
+// import Img from 'gatsby-image'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import SEO from 'components/SEO'
 import { css } from '@emotion/core'
@@ -17,7 +17,7 @@ export default function Post({
 }) {
   const date = mdx.frontmatter.date
   const title = mdx.frontmatter.title
-  const banner = mdx.frontmatter.banner
+  // const banner = mdx.frontmatter.banner
 
   return (
     <Layout site={site} frontmatter={mdx.frontmatter}>
@@ -26,6 +26,10 @@ export default function Post({
         css={css`
           width: 100%;
           display: flex;
+          ul { 
+                margin-top: -16px;
+                margin-bottom: 0px;
+              }
         `}
       >
         <Container>
@@ -54,7 +58,7 @@ export default function Post({
           >
             {date && <h3>{date}</h3>}
           </div>
-          {banner && (
+          {/* {banner && (
             <div
               css={css`
                 padding: 30px;
@@ -68,7 +72,7 @@ export default function Post({
                 alt={site.siteMetadata.keywords.join(', ')}
               />
             </div>
-          )}
+          )} */}
           <br />
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </Container>

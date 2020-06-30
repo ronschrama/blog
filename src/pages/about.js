@@ -4,7 +4,6 @@ import { graphql } from 'gatsby';
 // import styled from '@emotion/styled';
 
 import Layout from 'components/Layout';
-import { useTheme } from 'components/Theming';
 import Container from 'components/Container';
 import Personal from '../components/Personal';
 import Hobbies from '../components/Hobbies';
