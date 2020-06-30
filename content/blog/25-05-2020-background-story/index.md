@@ -30,3 +30,5 @@ Based on this you can scan their Twitter timeline to see if they fit your expect
 
 ### Why starting small
 The basic idea is to start small. That's also why I don't believe in following a list and follow all those people. By starting small you actually see what everyone tweets. And you can see if the people you follow suit your interests and expectations. The other idea behind starting small is that by following influential people you expand your list based on them. They don't just tweet about their work and views but usually retweet a lot as well. If you see retweets that interest you, check those people's profiles. If they suit your interests you can follow them as well. This way you organically extend your lists and keep it maintainable.
+
+This is how I find the right people to stay up-to-date on Twitter. I hope you find these tips usefull. Don't forget there is no perfect formula for this, I still regularly update my Following list!
