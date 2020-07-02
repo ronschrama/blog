@@ -100,6 +100,13 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         author
+        banner {
+          childImageSharp {
+            fluid(maxWidth: 900) {
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            }
+          }
+        }
         slug
         keywords
       }
